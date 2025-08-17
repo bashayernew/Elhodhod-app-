@@ -1,0 +1,47 @@
+{
+  "name": "el-hodh0d",
+  "private": true,
+  "packageManager": "npm@10.8.2",
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev --parallel",
+    "dev:desktop": "turbo run dev --filter=@el-hodh0d/api --filter=@el-hodh0d/web",
+    "dev:api": "npm run dev -w packages/api",
+    "dev:web": "npm run dev -w apps/web",
+    "dev:web:3002": "npm run dev:3002 -w apps/web",
+    "dev:mobile": "npm run dev -w @el-hodh0d/mobile",
+    "db:up": "docker compose up -d",
+    "prisma:generate": "npm --workspace @el-hodh0d/api run prisma:generate",
+    "prisma:migrate": "npm --workspace @el-hodh0d/api run migrate",
+    "seed": "npm --workspace @el-hodh0d/api run seed",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test",
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^8.6.0",
+    "@typescript-eslint/parser": "^8.6.0",
+    "@types/node": "^20.14.10",
+    "eslint": "^9.9.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.0.0",
+    "husky": "^9.0.11",
+    "prettier": "^3.3.3",
+    "turbo": "^2.5.6",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}
+
+

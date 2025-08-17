@@ -1,0 +1,24 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@types/*": ["packages/types/src/*"],
+      "@ui/*": ["packages/ui/src/*"],
+      "@api/*": ["packages/api/src/*"],
+      "@data/*": ["packages/data/src/*"],
+      "@logic/*": ["packages/logic/src/*"],
+      "@ui-tokens/*": ["packages/ui-tokens/src/*"]
+    }
+  }
+}
+
+

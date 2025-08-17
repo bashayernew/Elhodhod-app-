@@ -1,0 +1,35 @@
+{
+  "name": "@el-hodh0d/web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3001",
+    "dev:3002": "next dev -p 3002",
+    "build": "next build",
+    "start": "next start -p 3001",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "next": "14.2.5",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "@el-hodh0d/ui": "file:../../packages/ui",
+    "@el-hodh0d/types": "file:../../packages/types",
+    "@hodhod/data": "file:../../packages/data",
+    "@el-hodh0d/logic": "file:../../packages/logic",
+    "@el-hodh0d/ui-tokens": "file:../../packages/ui-tokens",
+    "@hodhod/config": "file:../../packages/config"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.10",
+    "@types/react": "^18.2.66",
+    "@types/react-dom": "^18.2.22",
+    "eslint-config-prettier": "^9.1.0"
+  }
+}
+
+

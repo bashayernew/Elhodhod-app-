@@ -1,0 +1,27 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+.next
+build
+.turbo
+coverage
+test-results
+
+# Env
+.env
+.env.local
+apps/*/.env
+packages/*/.env
+
+# Editor
+.DS_Store
+.idea
+.vscode
+
+# Prisma
+packages/api/prisma/*.db
+packages/api/node_modules
+
+

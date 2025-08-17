@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--background: 11 11 13; /* #0b0b0d */
+	--foreground: 240 5.9% 95%;
+}
+
+.dark {
+	--background: 11 11 13; /* #0b0b0d */
+	--foreground: 0 0% 98%;
+}
+
+@layer base {
+	:root {
+		--radius: 0.5rem;
+	}
+	* {
+		@apply border-border;
+	}
+	body {
+		@apply bg-background text-foreground;
+	}
+}
+
+@layer utilities {
+	.bg-background { background-color: hsl(var(--background)); }
+	.text-foreground { color: hsl(var(--foreground)); }
+	.border-border { border-color: hsl(var(--foreground) / 0.12); }
+}
+
+

@@ -1,0 +1,45 @@
+{
+  "name": "@el-hodh0d/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prisma:generate": "prisma generate --schema prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate dev --schema prisma/schema.prisma --name init --skip-seed",
+    "prepare:prisma": "npm run prisma:generate && npm run prisma:migrate",
+    "dev": "tsx watch src/index.ts",
+    "start": "node --enable-source-maps dist/index.js",
+    "build": "tsc -p tsconfig.build.json",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests",
+    "db:push": "prisma db push",
+    "seed": "node prisma/seed.mjs"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.645.0",
+    "@aws-sdk/s3-request-presigner": "^3.645.0",
+    "@el-hodh0d/types": "file:../types",
+    "@fastify/cookie": "^9",
+    "@fastify/cors": "^9",
+    "@fastify/helmet": "^12",
+    "@fastify/jwt": "^9",
+    "@fastify/rate-limit": "^9",
+    "@fastify/swagger": "^9",
+    "@fastify/swagger-ui": "^3",
+    "@prisma/client": "^5.18.0",
+    "@sentry/node": "^8.30.0",
+    "fastify": "^5.5.0",
+    "fastify-type-provider-zod": "^4",
+    "ioredis": "^5.4.1",
+    "mime-types": "^2.1.35",
+    "prisma": "^5.18.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}

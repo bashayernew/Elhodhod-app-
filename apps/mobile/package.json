@@ -1,0 +1,42 @@
+{
+  "name": "@el-hodh0d/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "expo start --clear",
+    "start": "expo start",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "build": "echo \"Expo uses EAS for builds\"",
+    "lint": "eslint .",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run --passWithNoTests"
+  },
+  "dependencies": {
+    "expo": "~51.0.21",
+    "expo-router": "^3.5.23",
+    "react": "18.2.0",
+    "react-native": "0.74.4",
+    "react-native-safe-area-context": "^4.10.5",
+    "react-native-screens": "~3.31.1",
+    "@el-hodh0d/ui": "file:../../packages/ui",
+    "@el-hodh0d/types": "file:../../packages/types",
+    "@hodhod/data": "file:../../packages/data",
+    "@el-hodh0d/logic": "file:../../packages/logic",
+    "@el-hodh0d/ui-tokens": "file:../../packages/ui-tokens",
+    "@hodhod/config": "file:../../packages/config",
+    "expo-image-picker": "~15.0.7",
+    "expo-notifications": "~0.28.16",
+    "expo-file-system": "~17.0.1",
+    "expo-location": "~17.0.1",
+    "expo-secure-store": "~13.0.2"
+  },
+  "devDependencies": {
+    "@types/react": "^18.2.66",
+    "@types/react-native": "^0.73.0",
+    "typescript": "^5.5.4"
+  }
+}
+
+
