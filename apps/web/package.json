@@ -3,13 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "prisma:generate": "prisma generate --schema ./prisma/schema.prisma",
-    "prisma:migrate": "prisma migrate dev --schema ./prisma/schema.prisma",
-    "prisma:deploy": "dotenv -e .env.staging -- prisma migrate deploy --schema ./prisma/schema.prisma",
+    "prisma:generate": "prisma generate",
+    "prisma:migrate": "prisma migrate dev",
+    "prisma:deploy": "dotenv -e .env.staging -- prisma migrate deploy",
     "dev": "next dev -p 3001",
     "dev:staging": "dotenv -e .env.staging -- next dev -p 3002",
     "build": "next build",
-    "postinstall": "prisma generate --schema ./prisma/schema.prisma",
+    "postinstall": "prisma generate",
     "start": "next start -p 3001"
   },
   "dependencies": {
