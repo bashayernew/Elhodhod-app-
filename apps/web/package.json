@@ -3,18 +3,20 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prisma:generate": "prisma generate --schema ./prisma/schema.prisma",
+    "prisma:migrate": "prisma migrate dev --schema ./prisma/schema.prisma",
+    "prisma:deploy": "dotenv -e .env.staging -- prisma migrate deploy --schema ./prisma/schema.prisma",
     "dev": "next dev -p 3001",
-    "dev:3002": "next dev -p 3002",
+    "dev:staging": "dotenv -e .env.staging -- next dev -p 3002",
     "build": "next build",
-    "start": "next start -p 3001",
-    "lint": "eslint .",
-    "typecheck": "tsc -p tsconfig.json --noEmit",
-    "test": "vitest run --passWithNoTests"
+    "start": "next start -p 3001"
   },
   "dependencies": {
     "next": "14.2.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "@prisma/client": "^5.18.0",
+    "jose": "^5.9.6",
     "@el-hodh0d/ui": "file:../../packages/ui",
     "@el-hodh0d/types": "file:../../packages/types",
     "@hodhod/data": "file:../../packages/data",
@@ -28,7 +30,9 @@
     "tailwindcss": "^3.4.10",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
-    "eslint-config-prettier": "^9.1.0"
+    "eslint-config-prettier": "^9.1.0",
+    "prisma": "^5.18.0",
+    "dotenv-cli": "^7.4.2"
   }
 }
 
