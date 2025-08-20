@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "lint": "next lint",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
     "prisma:deploy": "dotenv -e .env.staging -- prisma migrate deploy",
@@ -21,6 +22,7 @@
     "@hodhod/config": "file:../../packages/config",
     "@hodhod/data": "file:../../packages/data",
     "@prisma/client": "^5.18.0",
+    "el-hodh0d": "file:../..",
     "framer-motion": "^11",
     "i18next": "^25.3.6",
     "jose": "^5.9.6",
@@ -34,8 +36,12 @@
   "devDependencies": {
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
     "autoprefixer": "^10.4.19",
     "dotenv-cli": "^7.4.2",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.5",
     "eslint-config-prettier": "^9.1.0",
     "postcss": "^8.4.39",
     "prisma": "^5.18.0",
