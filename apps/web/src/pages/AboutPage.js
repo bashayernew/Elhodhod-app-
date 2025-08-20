@@ -1,4 +1,6 @@
+"use client";
 import React from 'react';
+import dynamic from 'next/dynamic';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { 
@@ -337,4 +339,4 @@ const AboutPage = () => {
   );
 };
 
-export default AboutPage;
+export default dynamic(() => Promise.resolve(AboutPage), { ssr: false });

@@ -1,4 +1,6 @@
+"use client";
 import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { useParams, useLocation, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
@@ -124,6 +126,6 @@ const AuctionDetailsPage = () => {
   );
 };
 
-export default AuctionDetailsPage;
+export default dynamic(() => Promise.resolve(AuctionDetailsPage), { ssr: false });
 
 

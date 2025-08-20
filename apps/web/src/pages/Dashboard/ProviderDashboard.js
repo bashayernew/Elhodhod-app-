@@ -1,4 +1,6 @@
+"use client";
 import React, { useEffect, useMemo, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../contexts/AuthContext';
 import { motion } from 'framer-motion';
@@ -396,4 +398,4 @@ const ProviderDashboard = () => {
   );
 };
 
-export default ProviderDashboard;
+export default dynamic(() => Promise.resolve(ProviderDashboard), { ssr: false });

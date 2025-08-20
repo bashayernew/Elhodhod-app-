@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@el-hodh0d/ui";
 import { useProviders } from "@hodhod/data";
 

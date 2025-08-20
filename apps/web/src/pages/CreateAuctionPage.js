@@ -1,4 +1,6 @@
+"use client";
 import React, { useState } from 'react';
+import dynamic from 'next/dynamic';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { apiFetch } from '../utils/api';
@@ -232,6 +234,6 @@ const CreateAuctionPage = () => {
   );
 };
 
-export default CreateAuctionPage;
+export default dynamic(() => Promise.resolve(CreateAuctionPage), { ssr: false });
 
 

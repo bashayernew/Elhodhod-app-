@@ -1,9 +1,11 @@
+"use client";
 import React, { useEffect, useState } from 'react';
+import dynamic from 'next/dynamic';
 import { useParams, useLocation, Link } from 'react-router-dom';
 
 const baseUrl = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
 
-export default function AuctionBidsPage(){
+function AuctionBidsPage(){
   const { id } = useParams();
   const location = useLocation();
   const [items, setItems] = useState([]);
@@ -46,4 +48,4 @@ export default function AuctionBidsPage(){
   );
 }
 
-
+export default dynamic(() => Promise.resolve(AuctionBidsPage), { ssr: false });

@@ -1,4 +1,6 @@
+"use client";
 import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import { useTranslation } from 'react-i18next';
@@ -503,4 +505,4 @@ const AuctionsPage = () => {
   );
 };
 
-export default AuctionsPage;
+export default dynamic(() => Promise.resolve(AuctionsPage), { ssr: false });

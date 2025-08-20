@@ -1,4 +1,6 @@
+"use client";
 import React, { useState, useEffect } from 'react';
+import dynamic from 'next/dynamic';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../../contexts/AuthContext';
@@ -359,4 +361,4 @@ const SignupPage = () => {
   );
 };
 
-export default SignupPage;
+export default dynamic(() => Promise.resolve(SignupPage), { ssr: false });
